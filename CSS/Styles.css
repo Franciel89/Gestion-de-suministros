@@ -10,9 +10,61 @@
 body {
     font-family: Verdana;
     overflow-x: hidden;
+    overflow-y: scroll;
     background-color: #25343a;
     color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.main-content {
+    width: calc(100% - 78px);
+    height: calc(100% - 60px);
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 15px 0 15px;
+}
+
+.header-container h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.header-container span {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.header-container ol {
+    display: flex;
+    padding: 7px 5px;
+    gap: 5px;
+}
+
+.header-container ol li {
+    list-style: none;
+}
+
+.header-container ol li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 /* Estilos del menu desplegable */
 
@@ -24,10 +76,8 @@ body {
     height: 100%;
     width: 311px;
     transition: all 0.5s ease;
-    z-index: 30 ;
+    z-index: 30;
 }
-
-
 
 .menu-slide .logo-detail {
     display: flex;
@@ -56,7 +106,7 @@ body {
     margin-top: 10px;
 }
 
-.menu-slide.close .logo-detail .logo-name{
+.menu-slide.close .logo-detail .logo-name {
     pointer-events: none;
     opacity: 0;
     transition-delay: 0.1s;
@@ -73,6 +123,7 @@ body {
     padding-top: 30px 0 150px 0;
     overflow: auto;
 }
+
 .menu-slide.close .nav-links {
     overflow: visible;
 }
@@ -92,8 +143,9 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .menu-slide.close .nav-links li .icon-link {
-display: block;
+    display: block;
 }
 
 .menu-slide .nav-links li i {
@@ -108,8 +160,9 @@ display: block;
 
 .menu-slide .nav-links li.showMenu i.arrow {
     transform: rotate(-180deg);
-    
+
 }
+
 .menu-slide.close .nav-links i.arrow {
     display: none;
 }
@@ -125,6 +178,7 @@ display: block;
     font-weight: 400;
     color: #fff;
 }
+
 .menu-slide.close .nav-links li a .link-name {
     opacity: 0;
     pointer-events: none;
@@ -142,9 +196,11 @@ display: block;
 }
 
 .menu-slide .nav-links li .sub-menu a {
+    display: inline-block;
     color: #fff;
-    font-size: 15px;
-    padding: 5px 0;
+    padding: 10px;
+    height: 41px;
+    font-size: 18px;
     white-space: nowrap;
     opacity: 0.6;
     transition: all 0.4s ease;
@@ -174,7 +230,7 @@ display: block;
     transition: all 0.4s ease;
 }
 
-.menu-slide.close{
+.menu-slide.close {
     width: 78px;
 
 }
@@ -182,6 +238,7 @@ display: block;
 .menu-slide .nav-links li .sub-menu .link-name {
     display: none;
 }
+
 .menu-slide.close .nav-links li .sub-menu .link-name {
     display: none;
 }
@@ -206,7 +263,7 @@ display: block;
 
 .menu-slide .nav-links li:hover .sub-menu.blank {
     top: 0px;
-    transform: translateY(35%);
+    transform: translateY(0%);
 
 }
 
@@ -222,7 +279,7 @@ display: block;
     transition: all 0.5s ease;
 }
 
-.menu-slide.close .profile-details{
+.menu-slide.close .profile-details {
     width: 78px;
     background: none;
 }
@@ -274,7 +331,7 @@ display: block;
     transition: all 0.5s ease;
 }
 
-.menu-slide.close  ~ .home-section {
+.menu-slide.close~.home-section {
     left: 78px;
     width: calc(100% -78px);
 }
@@ -304,27 +361,28 @@ display: block;
 
 /* Estilos del footer */
 
-.main-footer{
-    position: static;
-    display: flex;
-    align-items: center;
-   margin-left: 78px;
+.main-footer {
+    margin-left: 78px;
     height: 60px;
     padding: 15px;
-    width: 100%;
+    width: calc(100% - 78px);
     background-color: #34454d;
-    gap: 5px;
     border-top: solid 1px #e4e9f7;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
 }
 
-.main-footer  h3{
-    font-size: 14px;
-}
-.main-footer  h3{
+.main-footer h3 {
     font-size: 14px;
 }
 
-.main-footer  h3 a{
+.main-footer h3 {
+    font-size: 14px;
+}
+
+.main-footer h3 a {
     text-decoration: none;
     color: #e4e9f7;
 }

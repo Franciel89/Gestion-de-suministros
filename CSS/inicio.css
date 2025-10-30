@@ -1,60 +1,41 @@
-.main-content{
-    width: calc(100% - 78px);
-    height: calc(100% - 60px);
-    margin-left: auto;
-}
 
-.header-container{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 15px 0 15px;
-}
 
-.header-container h1{
-    font-size: 24px;
-    color: #fff;
-}
-
-.header-container span{
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: 100;
-}
-
-.header-container ol {
-    padding: 7px 5px;
-}
-
-.header-container ol li{
-    list-style: none;
-}
-
-.header-container ol li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.boxing{
+.boxing {
     padding: 15px;
     display: flex;
     justify-content: space-between;
     gap: 25px;
 }
 
-.box-inf{
+.box-inf {
+    position: relative;
     width: 25%;
     background-color: #da2727;
-    
+    overflow: hidden;
 }
 
-.box-inf .inner{
+.box-inf:hover .icon-bg{
+    transform: scale(1.2);
+}
+
+.box-inf .icon-bg {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 80px; 
+    color: rgba(255, 255, 255, 0.3); 
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.box-inf .inner {
+    position: relative;
     padding: 10px;
     color: #f5f4f4;
 }
 
 
-.box-inf a{
+.box-inf a {
     display: block;
     background-color: #942020;
     text-align: center;
@@ -62,49 +43,48 @@
     text-decoration: none;
     color: #fff;
     opacity: 0.7;
-    transition: all 0.4s ease;
 }
 
-.box-inf a:hover{
+.box-inf a:hover {
     opacity: 1;
 }
 
-.box-inf h3{
+.box-inf h3 {
     font-size: 38px;
     font-weight: bold;
     margin-bottom: 10px;
     white-space: nowrap;
 }
 
-.box-inf p{
+.box-inf p {
     margin-bottom: 10px;
 }
 
-.box-inf.green{
+.box-inf.green {
     background-color: #17a934;
 }
 
-.box-inf.green a{
-     background-color: #116e23;
+.box-inf.green a {
+    background-color: #116e23;
 }
 
-.box-inf.blue{
+.box-inf.blue {
     background-color: #1572be;
 }
 
-.box-inf.blue a{
+.box-inf.blue a {
     background-color: #104d7e;
 }
 
-.box-inf.alise-blue{
+.box-inf.alise-blue {
     background-color: #0ab0b6;
 }
 
-.box-inf.alise-blue a{
-     background-color: #097b7f;
+.box-inf.alise-blue a {
+    background-color: #097b7f;
 }
 
-.box-gen{
+.box-gen {
     padding: 15px;
     width: 100%;
     display: flex;
@@ -115,24 +95,46 @@
     overflow: auto;
 }
 
-.box-header{
+div.box-default {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-bottom: 0.5px solid #9b9b9b;
+}
+
+.box-default .legend {
+    list-style: none;
+}
+.box-default .legend li {
+    color: #000;
+    font-size: 18px;
+    padding: 3px 0;
+}
+
+.box-default .legend li i{
+    font-size: 12px;
+    color: #097b7f;
+}
+.box-header {
     padding: 10px;
     color: #000;
     background-color: #fff;
     border-radius: 3px 3px 0 0;
-    border-top: solid 5px  #9b9b9b;
-    border-bottom: solid 1px  #9b9b9b;
+    border-top: solid 5px #9b9b9b;
+    border-bottom: solid 1px #9b9b9b;
 }
 
-.box-body{
+.box-body {
     width: 50%;
 }
 
-.box-body ul{
+.box-body ul {
     background-color: #fff;
 }
 
-.box-body .suministros li{
+.box-body .suministros li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -140,51 +142,57 @@
     height: 100px;
     width: 100%;
     list-style: none;
-    border-bottom: solid 1px  #9b9b9b;
+    border-bottom: solid 1px #9b9b9b;
 }
 
-.box-body .suministros li a{
-  display: flex;
-  justify-content: flex-end; 
-  align-items: center; 
-  text-decoration: none; 
-  padding: 8px; 
-  width: 100%;
+.box-body .suministros li a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px;
+    width: 100%;
 }
 
-.box-body .suministros li span{
+.box-body .suministros li span {
     margin-right: auto;
     margin-left: 15px;
 }
 
-.box-body .suministros li img{
+.box-body .suministros li img {
     width: 60px;
-    height: 60px;   
+    height: 60px;
+    border: 2px solid #9b9b9b;
+    border-radius: 10px;
 }
 
-.box-body .suministros a p{
+.box-body .suministros a p {
     color: #000;
     font-size: 16px;
 }
 
-.box-body .suministros a p.color{
-    
-}
 
-.box-footer{
+.box-footer {
     width: 100%;
     background-color: #fff;
     border-top: solid 1px #9b9b9b;
     text-align: center;
     padding: 15px;
     border-radius: 0 0 3px 3px;
-}   
-
-.box-footer a{
-    font-size: 16px;
-    color: #000;
 }
 
-.box-footer a:hover{
+.box-footer a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.box-footer a:hover {
     color: #e5560e;
+}
+
+#ventasChart {
+  width: 250px !important;
+  height: 250px !important;
+  display: block;
 }

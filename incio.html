@@ -18,123 +18,107 @@
   <aside class="menu-slide close">
 
     <div class="logo-detail">
+
       <i class="ri-instance-fill"></i>
+
       <span class="logo-name">Gestion de suministros</span>
     </div>
 
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="incio.html">
           <i class="ri-home-3-fill"></i>
           <span class="link-name">Inicio</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Inicio</a></li>
+          <li><a href="incio.html">Inicio</a></li>
 
         </ul>
       </li>
 
       <li>
-        <a href="#">
+        <a href="usuarios.html">
           <i class="ri-id-card-fill"></i>
           <span class="link-name">Usuarios</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Usuarios</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
 
         </ul>
       </li>
 
       <li>
 
-        <a href="#">
+        <a href="categorias.html">
           <i class="ri-layout-grid-fill"></i>
           <span class="link-name">categorias</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Categorias</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
 
         </ul>
 
       </li>
 
       <li>
-        <a href="#">
+        <a href="suministros.html">
           <i class="ri-parking-box-fill"></i>
           <span class="link-name">Suministros</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Suministros</a></li>
+          <li><a href="suministros.html">Suministros</a></li>
 
         </ul>
       </li>
 
       <li>
-        <a href="#">
+        <a href="inventario.html">
           <i class="ri-archive-fill"></i>
           <span class="link-name">Inventario</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Inventrio</a></li>
+          <li><a href="inventario.html">Inventrio</a></li>
 
         </ul>
       </li>
 
       <li>
-        <a href="#">
+        <a href="departamentos.html">
           <i class="ri-group-line"></i>
           <span class="link-name">Departamentos</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Departamentos</a></li>
+          <li><a href="departamentos.html">Departamentos</a></li>
 
         </ul>
       </li>
 
       <li>
-        <div class="icon-link">
-          <a href="#">
-            <i class="ri-edit-line"></i>
-            <span class="link-name">Registro</span>
-          </a>
-          <i class="ri-arrow-down-s-line arrow"></i>
-        </div>
-
-        <ul class="sub-menu">
-
-          <li><a href="#">Administrar consumo</a></li>
-          <li><a href="#">Agregar Departamento</a></li>
-
-        </ul>
-
-      </li>
-
-      <li>
-        <a href="#">
+        <a href="reporte.html">
           <i class="ri-file-chart-fill"></i>
           <span class="link-name">Reporte</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Reporte</a></li>
+          <li><a href="reporte.html">Reporte</a></li>
 
         </ul>
       </li>
 
       <li>
-        <a href="#">
+        <a href="acerca de.html">
           <i class="ri-info-i"></i>
           <span class="link-name">Acerca de</span>
         </a>
         <ul class="sub-menu blank">
 
-          <li><a href="#">Acerca de</a></li>
+          <li><a href="acerca de.html">Acerca de</a></li>
 
         </ul>
       </li>
@@ -165,7 +149,8 @@
     </div>
   </section>
 
-  
+  <!-- contenido de la pagina -->
+
   <section class="main-content">
 
     <!-- header principal -->
@@ -179,6 +164,10 @@
             inicio
           </a>
         </li>
+        <li>
+          <i class="ri-arrow-right-wide-line"></i>
+          Panel de control
+        </li>
       </ol>
     </article>
 
@@ -191,6 +180,7 @@
           <h3>50</h3>
           <p>Pedidos</p>
         </div>
+        <i class="ri-shopping-bag-3-fill icon-bg"></i>
         <a href="#" class="box">
           Mas info
           <i class="ri-arrow-right-circle-line"></i>
@@ -202,7 +192,8 @@
           <h3>10</h3>
           <p>categorias</p>
         </div>
-        <a href="#" class="box">
+        <i class="ri-folder-3-line icon-bg"></i>
+        <a href="categorias.html" class="box">
           Mas info
           <i class="ri-arrow-right-circle-line"></i>
         </a>
@@ -213,7 +204,8 @@
           <h3>30</h3>
           <p>Departamentos</p>
         </div>
-        <a href="#" class="box">
+        <i class="ri-building-4-line icon-bg"></i>
+        <a href="departamentos.html" class="box">
           Mas info
           <i class="ri-arrow-right-circle-line"></i>
         </a>
@@ -224,14 +216,15 @@
           <h3>100</h3>
           <p>Suministros</p>
         </div>
-        <a href="#" class="box">
+        <i class="ri-truck-line icon-bg"></i>
+        <a href="suministros.html" class="box">
           Mas info
           <i class="ri-arrow-right-circle-line"></i>
         </a>
       </div>
     </article>
 
-    <!-- registro de actividad -->
+    <!-- Dashboard-->
 
     <article class="box-gen box-default">
 
@@ -239,13 +232,46 @@
         <div class="box-header">
           <h3>Suministros más requerido</h3>
         </div>
+
+        <div class="box-default">
+
+          <canvas id="ventasChart" width="300" height="150"></canvas>
+
+          <ul class="legend">
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+            <li><i class="ri-circle-fill"></i>
+              <span>Producto</span>
+            </li>
+          </ul>
+        </div>
+
         <ul class="suministros">
 
           <li>
             <a href="#">
               <img src="./Img/box-img.png" alt="foto">
               <span>Producto</span>
-              <p >10%</pc>
+              <p>10%</pc>
             </a>
           </li>
 
@@ -336,7 +362,7 @@
         </ul>
 
         <div class="box-footer">
-          <a>ver todos los suministros</a>
+          <a href="suministros.html">ver todos los suministros</a>
         </div>
 
       </div>
@@ -351,7 +377,10 @@
     <span>Todos los derechos reservados.</span>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./JS/aside.js"></script>
+
 </body>
 
 </html>
