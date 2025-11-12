@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de suministros</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="./CSS/Styles.css">
+    <link rel="stylesheet" href="./CSS/Categorias.css ">
 </head>
 <body>
     
@@ -148,7 +150,7 @@
 
     <!-- header principal -->
 
-    <article class="header-container">
+         <article class="header-container">
       <h1>Administrar categorias</h1>
       <ol>
         <li>
@@ -164,8 +166,42 @@
       </ol>
     </article>
 
+
+    <article class="box general">
+
+      <div class="box header">
+        <button id="btnAbrirModal" class="btn-primary">Añadir usuario</button>
+      </div>
+  
+    <div class="box body">
+        <table id="tablaCategorias" class="table-categorias display">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Categorias</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Electronicos</td>
+              <td class="table-actions">
+                <button class="btn-edit"><i class="ri-pencil-line"></i></button>
+                <button class="btn-delete"><i class="ri-delete-bin-line"></i></button>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
     </article>
   </section>
+
+    </article>
+
+   
 
   <!-- footer principal -->
 
@@ -173,8 +209,9 @@
     <h3>Copyright &copy; 2025 <a href="#">Gestion de suministros. </a></h3>
     <span>Todos los derechos reservados.</span>
   </footer>
-
-  <script src="./JS/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="./JS/tablas/tablas-categorias.js"></script>
    <script src="./JS/aside.js"></script>
 
 </body>

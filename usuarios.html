@@ -171,9 +171,7 @@
     <article class="box general">
 
       <div class="box header">
-        <button class="btn-primary">Agregar usuario</button>
-      </div>
-
+        <button id="btnAbrirModal" class="btn-primary">Añadir usuario</button>
       </div>
 
       <div class="box body">
@@ -261,6 +259,45 @@
 
     </div>
 
+     <div id="modalEdit" class="modal-overlay">
+
+      <div class="modal-content">
+        <h2>Agregar nuevo usuario</h2>
+
+        <form id="formUsuario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="usuario">Usuario:</label>
+          <input type="text" id="usuario" name="usuario" required>
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="perfil">Perfil:</label>
+          <select id="perfil" name="perfil" required>
+            <option value="">Seleccione un perfil</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Gestor de Suministros">Gestor de Suministros</option>
+            <option value="Supervisor General">Supervisor General</option>
+            <option value="Auditor Interno">Auditor Interno</option>
+            <option value="Personal Operativo">Personal Operativo</option>
+            <option value="Usuario Invitado">Usuario Invitado</option>
+          </select>
+
+          <label for="foto">Foto:</label>
+          <input type="file" id="foto" name="foto" accept="image/png, image/jpeg, image/jpg" required>
+
+          <div class="modal-buttons">
+            <button type="submit" class="btn-primary">Guardar</button>
+            <button type="button" id="btnCerrarModal" class="btn-secondary">Cancelar</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
   </section>
 
   <!-- footer principal -->
@@ -272,7 +309,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-  <script src="./JS/usuario.js"></script>
+  <script src="./JS/tablas/tabla-usuario.js"></script>
   <script src="./JS/aside.js"></script>
 </body>
 
