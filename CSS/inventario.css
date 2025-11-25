@@ -1,0 +1,105 @@
+/* ==============================
+   GRID DE INVENTARIO (6 columnas)
+============================== */
+
+.inventory-grid {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas fijas */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   CARD DE PRODUCTO
+============================== */
+
+.inventory-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    color: #000;
+
+    /* SOMBRA + BORDE NEGRO */
+    border: 2px solid #000;        /* ✔ borde negro solicitado */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover animado */
+.inventory-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+
+    /* AL PASAR EL MOUSE → borde naranja */
+    border-color: #e5560e;
+}
+
+/* Imagen */
+.inventory-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+/* Zoom imagen */
+.inventory-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Nombre del producto */
+.inventory-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34454d;
+}
+
+/* Categoría */
+.inventory-card p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Stock */
+.inventory-card .stock {
+    font-size: 15px;
+    font-weight: bold;
+    color: #e5560e;
+}
+
+/* ======================================
+   RESPONSIVE — mantiene armonía del diseño
+====================================== */
+
+@media (max-width: 1600px) {
+    .inventory-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+
+@media (max-width: 1200px) {
+    .inventory-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+@media (max-width: 900px) {
+    .inventory-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+@media (max-width: 600px) {
+    .inventory-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna */
+    }
+}
+ 

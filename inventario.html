@@ -1,181 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de suministros</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/Styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario - Gestión de Suministros</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./CSS/Styles.css" />
+    <link rel="stylesheet" href="./CSS/inventario.css" />
 </head>
+
 <body>
-    
-<!-- Menu-desplegable -->
 
-  <aside class="menu-slide close">
-
-    <div class="logo-detail">
-      <i class="ri-instance-fill"></i>
-      <span class="logo-name">Gestion de suministros</span>
-    </div>
-
-    <ul class="nav-links">
-      <li>
-        <a href="incio.html">
-          <i class="ri-home-3-fill"></i>
-          <span class="link-name">Inicio</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="incio.html">Inicio</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="usuarios.html">
-          <i class="ri-id-card-fill"></i>
-          <span class="link-name">Usuarios</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="usuarios.html">Usuarios</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-
-        <a href="categorias.html">
-          <i class="ri-layout-grid-fill"></i>
-          <span class="link-name">categorias</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="categorias.html">Categorias</a></li>
-
-        </ul>
-
-      </li>
-
-      <li>
-        <a href="suministros.html">
-          <i class="ri-parking-box-fill"></i>
-          <span class="link-name">Suministros</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="suministros.html">Suministros</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="inventario.html">
-          <i class="ri-archive-fill"></i>
-          <span class="link-name">Inventario</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="inventario.html">Inventrio</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="departamentos.html">
-          <i class="ri-group-line"></i>
-          <span class="link-name">Departamentos</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="departamentos.html">Departamentos</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="reporte.html">
-          <i class="ri-file-chart-fill"></i>
-          <span class="link-name">Reporte</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="reporte.html">Reporte</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="acerca de.html">
-          <i class="ri-info-i"></i>
-          <span class="link-name">Acerca de</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="acerca de.html">Acerca de</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <div class="profile-details">
-          <div class="profile-content">
-            <img src="./Img/perfil.jpg" alt="profile">
-          </div>
-          <div class="name-job">
-            <div class="profile-name">Prem Shadin</div>
-            <div class="job">Web desginer</div>
-          </div>
-          <i class="ri-logout-box-line"></i>
+    <!-- Menu-desplegable -->
+    <aside class="menu-slide close">
+        <div class="logo-detail">
+            <i class="ri-instance-fill"></i>
+            <span class="logo-name">Gestion de suministros</span>
         </div>
-      </li>
-    </ul>
 
-    </div>
-  </aside>
+        <ul class="nav-links">
+            <li><a href="incio.html"><i class="ri-home-3-fill"></i><span class="link-name">Inicio</span></a></li>
+            <li><a href="usuarios.html"><i class="ri-id-card-fill"></i><span class="link-name">Usuarios</span></a></li>
+            <li><a href="categorias.html"><i class="ri-layout-grid-fill"></i><span class="link-name">Categorias</span></a></li>
+            <li><a href="suministros.html"><i class="ri-parking-box-fill"></i><span class="link-name">Suministros</span></a></li>
+            <li><a href="inventario.html"><i class="ri-archive-fill"></i><span class="link-name">Inventario</span></a></li>
+            <li><a href="departamentos.html"><i class="ri-group-line"></i><span class="link-name">Departamentos</span></a></li>
+            <li><a href="reporte.html"><i class="ri-file-chart-fill"></i><span class="link-name">Reporte</span></a></li>
+            <li><a href="acerca de.html"><i class="ri-info-i"></i><span class="link-name">Acerca de</span></a></li>
+        </ul>
+    </aside>
 
-  <!-- home-bar -->
+    <!-- home-bar -->
+    <section class="home-section">
+        <div class="home-content">
+            <i class="ri-menu-line"></i>
+            <span class="text">Inventario</span>
+        </div>
+    </section>
 
-  <section class="home-section">
-    <div class="home-content">
-      <i class="ri-menu-line"></i>
-      <span class="text">Inventario</span>
-    </div>
-  </section>
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="main-content">
 
-  
-  <section class="main-content">
+        <!-- TÍTULO -->
+        <article class="header-container">
+            <h1>Inventario de productos</h1>
+            <ol>
+                <li><a href="incio.html"><i class="ri-dashboard-3-line"></i> inicio</a></li>
+                <li><i class="ri-arrow-right-wide-line"></i> Inventario</li>
+            </ol>
+        </article>
 
-    <!-- header principal -->
+        <!-- GRID DE 24 PRODUCTOS -->
+        <div class="inventory-grid">
 
-    <article class="header-container">
-      <h1>Administrar movimientos</h1>
-      <ol>
-        <li>
-          <a href="incio.html">
-            <i class="ri-dashboard-3-line"></i>
-            inicio
-          </a>
-        </li>
-        <li>
-          <i class="ri-arrow-right-wide-line"></i>
-          Administrar movimientos
-        </li>
-      </ol>
-    </article>
+            <!-- ===== FILA 1 ===== -->
+            <div class="inventory-card">
+                <img src="./Img/botellon.png" />
+                <h3>Botellones de Agua</h3>
+                <p>Categoría: Bebidas</p>
+                <span class="stock">Stock disponible: <strong>20</strong></span>
+            </div>
 
-    </article>
-  </section>
+            <div class="inventory-card">
+                <img src="./Img/papel.png" />
+                <h3>Resmas de Papel</h3>
+                <p>Categoría: Oficina</p>
+                <span class="stock">Stock disponible: <strong>15</strong></span>
+            </div>
 
-  <!-- footer principal -->
+            <div class="inventory-card">
+                <img src="./Img/cafe.png" />
+                <h3>Café Molido</h3>
+                <p>Categoría: Bebidas</p>
+                <span class="stock">Stock disponible: <strong>8</strong></span>
+            </div>
 
-  <footer class="main-footer">
-    <h3>Copyright &copy; 2025 <a href="#">Gestion de suministros. </a></h3>
-    <span>Todos los derechos reservados.</span>
-  </footer>
+            <div class="inventory-card">
+                <img src="./Img/toner.png" />
+                <h3>Tóner Impresora</h3>
+                <p>Categoría: Tecnología</p>
+                <span class="stock">Stock disponible: <strong>6</strong></span>
+            </div>
 
-  <script src="./JS/app.js"></script>
-   <script src="./JS/aside.js"></script>
+            <div class="inventory-card">
+                <img src="./Img/lapiz.png" />
+                <h3>Lápices</h3>
+                <p>Categoría: Oficina</p>
+                <span class="stock">Stock disponible: <strong>100</strong></span>
+            </div>
 
+            <div class="inventory-card">
+                <img src="./Img/cuaderno.png" />
+                <h3>Cuadernos</h3>
+                <p>Categoría: Oficina</p>
+                <span class="stock">Stock disponible: <strong>35</strong></span>
+            </div>
+
+            <!-- ===== FILA 2 ===== -->
+            <div class="inventory-card">
+                <img src="./Img/jabon.png" />
+                <h3>Jabón Líquido</h3>
+                <p>Categoría: Limpieza</p>
+                <span class="stock">Stock disponible: <strong>12</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/desinfectante.png" />
+                <h3>Desinfectante</h3>
+                <p>Categoría: Limpieza</p>
+                <span class="stock">Stock disponible: <strong>18</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/servilletas.png" />
+                <h3>Servilletas</h3>
+                <p>Categoría: Cocina</p>
+                <span class="stock">Stock disponible: <strong>50</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/escoba.png" />
+                <h3>Escobas</h3>
+                <p>Categoría: Limpieza</p>
+                <span class="stock">Stock disponible: <strong>7</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/cafe.png" />
+                <h3>Café Instantáneo</h3>
+                <p>Categoría: Bebidas</p>
+                <span class="stock">Stock disponible: <strong>14</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/te.png" />
+                <h3>Té en Sobres</h3>
+                <p>Categoría: Bebidas</p>
+                <span class="stock">Stock disponible: <strong>22</strong></span>
+            </div>
+
+            <!-- ===== FILA 3 ===== -->
+            <div class="inventory-card">
+                <img src="./Img/sillas.png" />
+                <h3>Sillas</h3>
+                <p>Categoría: Mobiliario</p>
+                <span class="stock">Stock disponible: <strong>4</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/mesas.png" />
+                <h3>Mesas</h3>
+                <p>Categoría: Mobiliario</p>
+                <span class="stock">Stock disponible: <strong>2</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/mouse.png" />
+                <h3>Mouse</h3>
+                <p>Categoría: Tecnología</p>
+                <span class="stock">Stock disponible: <strong>10</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/teclado.png" />
+                <h3>Teclados</h3>
+                <p>Categoría: Tecnología</p>
+                <span class="stock">Stock disponible: <strong>9</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/folders.png" />
+                <h3>Folders</h3>
+                <p>Categoría: Oficina</p>
+                <span class="stock">Stock disponible: <strong>65</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/corrector.png" />
+                <h3>Correctores</h3>
+                <p>Categoría: Oficina</p>
+                <span class="stock">Stock disponible: <strong>20</strong></span>
+            </div>
+
+            <!-- ===== FILA 4 ===== -->
+            <div class="inventory-card">
+                <img src="./Img/alfombra.png" />
+                <h3>Alfombras</h3>
+                <p>Categoría: Mobiliario</p>
+                <span class="stock">Stock disponible: <strong>3</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/tazas.png" />
+                <h3>Tazas</h3>
+                <p>Categoría: Cocina</p>
+                <span class="stock">Stock disponible: <strong>25</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/platos.png" />
+                <h3>Platos</h3>
+                <p>Categoría: Cocina</p>
+                <span class="stock">Stock disponible: <strong>30</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/guantes.png" />
+                <h3>Guantes de Limpieza</h3>
+                <p>Categoría: Limpieza</p>
+                <span class="stock">Stock disponible: <strong>40</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/cable.png" />
+                <h3>Cables USB</h3>
+                <p>Categoría: Tecnología</p>
+                <span class="stock">Stock disponible: <strong>17</strong></span>
+            </div>
+
+            <div class="inventory-card">
+                <img src="./Img/regletas.png" />
+                <h3>Regletas Eléctricas</h3>
+                <p>Categoría: Tecnología</p>
+                <span class="stock">Stock disponible: <strong>11</strong></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="main-footer">
+        <h3>
+            Copyright © 2025
+            <a href="#">Gestion de suministros.</a>
+        </h3>
+        <span>Todos los derechos reservados.</span>
+    </footer>
+
+    <script src="./JS/aside.js"></script>
 </body>
+
 </html>
