@@ -63,32 +63,36 @@
 
     <!-- TABLA -->
     <div class="body box">
-      <table id="tablaStock" class="table-usuarios display">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre del producto</th>
-            <th>Categoría</th>
-            <th>Cantidad</th>
-            <th>Fecha de ingreso</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
+      <!-- 🔹 NUEVO CONTENEDOR PARA APLICAR EL DISEÑO DE USUARIOS -->
+      <div class="table-container">
+        <table id="tablaStock" class="table-usuarios display">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre del producto</th>
+              <th>Categoría</th>
+              <th>Cantidad</th>
+              <th>Fecha de ingreso</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Botellones de agua</td>
-            <td>Bebidas</td>
-            <td>20</td>
-            <td>2025-01-10</td>
-            <td class="table-actions">
-              <button class="btn-edit"><i class="ri-pencil-line"></i></button>
-              <button class="btn-delete btn-eliminar"><i class="ri-delete-bin-line"></i></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Botellones de agua</td>
+              <td>Bebidas</td>
+              <td>20</td>
+              <td>2025-01-10</td>
+              <td class="table-actions">
+                <button class="btn-edit"><i class="ri-pencil-line"></i></button>
+                <button class="btn-delete btn-eliminar"><i class="ri-delete-bin-line"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🔹 FIN DEL CONTENEDOR -->
     </div>
 
     <!-- MODAL -->
@@ -131,6 +135,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="./JS/tablas/tabla-usuario.js"></script>
 
   <script src="./JS/suministros.js"></script>
   <script src="./JS/aside.js"></script>
