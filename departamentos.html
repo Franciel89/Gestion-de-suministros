@@ -61,7 +61,6 @@
 
     <button class="btn-add">Agregar Departamento</button>
 
-   
 <!-- Modal -->
 <div class="modal" id="modal-agregar">
     <div class="modal-content">
@@ -95,8 +94,8 @@
     </div>
 </div>
 
-<!-- 🔥 Filtros añadidos SIN CAMBIAR NADA DE TU ESTRUCTURA -->
-<div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+<!-- 🔥 AGREGADO SIN CAMBIAR NADA 🔥 -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0 15px 0;">
     <div>
         <label>Mostrar 
             <select id="num-registros" style="padding: 4px 6px; border-radius: 6px;">
@@ -115,7 +114,7 @@
         </label>
     </div>
 </div>
-<!-- 🔥 FIN DEL BLOQUE AÑADIDO -->
+<!-- 🔥 FIN DEL AGREGADO 🔥 -->
 
 <!-- Tabla -->
 <div class="table-container">
@@ -155,7 +154,7 @@
 </section>
 
 <footer class="main-footer">
-    <h3>COPYRIGHT © 2025 <a href="#">Gestión de Suministros</a></h3>
+    <h3>COPYRIGHT &copy; 2025 <a href="#">Gestión de Suministros</a></h3>
     <span>Todos los derechos reservados.</span>
 </footer>
 
@@ -178,7 +177,6 @@ btnAgregar.addEventListener('click', () => {
     modal.style.display = 'flex';
     modalTitle.textContent = "Agregar Departamento";
     editandoFila = null;
-
     document.querySelectorAll(".modal-content input").forEach(i => i.value = "");
 });
 
@@ -258,10 +256,10 @@ tablaBody.addEventListener("click", (e) => {
         modalTitle.textContent = "Editar Departamento";
         modal.style.display = "flex";
     }
-
 });
 
-/* 🔥 BUSCADOR */
+
+// 🔥 BUSCADOR
 document.getElementById("buscador").addEventListener("input", function () {
     const filtro = this.value.toLowerCase();
     const filas = tablaBody.querySelectorAll("tr");
@@ -272,7 +270,7 @@ document.getElementById("buscador").addEventListener("input", function () {
     });
 });
 
-/* 🔥 MOSTRAR N REGISTROS */
+// 🔥 MOSTRAR X REGISTROS
 document.getElementById("num-registros").addEventListener("change", function () {
     const max = parseInt(this.value);
     const filas = tablaBody.querySelectorAll("tr");
