@@ -1,181 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de suministros</title>
+    <title>Gestión de Suministros - Departamentos</title>
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/Styles.css">
+    <link rel="stylesheet" href="CSS/departamento.css">
+    <link rel="stylesheet" href="CSS/Styles.css">
+
+    <style>
+        .action-btn {
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 2px;
+        }
+        .edit-btn { background: #2b8df0; color: white; }
+        .delete-btn { background: #e03131; color: white; }
+    </style>
 </head>
 <body>
-    
+
 <!-- Menu-desplegable -->
-
-  <aside class="menu-slide close">
-
+<aside class="menu-slide close">
     <div class="logo-detail">
       <i class="ri-instance-fill"></i>
-      <span class="logo-name">Gestion de suministros</span>
+      <span class="logo-name">Gestión de Suministros</span>
     </div>
 
     <ul class="nav-links">
-      <li>
-        <a href="incio.html">
-          <i class="ri-home-3-fill"></i>
-          <span class="link-name">Inicio</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="incio.html">Inicio</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="usuarios.html">
-          <i class="ri-id-card-fill"></i>
-          <span class="link-name">Usuarios</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="usuarios.html">Usuarios</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-
-        <a href="categorias.html">
-          <i class="ri-layout-grid-fill"></i>
-          <span class="link-name">categorias</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="categorias.html">Categorias</a></li>
-
-        </ul>
-
-      </li>
-
-      <li>
-        <a href="suministros.html">
-          <i class="ri-parking-box-fill"></i>
-          <span class="link-name">Suministros</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="suministros.html">Suministros</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="inventario.html">
-          <i class="ri-archive-fill"></i>
-          <span class="link-name">Inventario</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="inventario.html">Inventario</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="departamentos.html">
-          <i class="ri-group-line"></i>
-          <span class="link-name">Departamentos</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="departamentos.html">Departamentos</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="reporte.html">
-          <i class="ri-file-chart-fill"></i>
-          <span class="link-name">Reporte</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="reporte.html">Reporte</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <a href="acerca de.html">
-          <i class="ri-info-i"></i>
-          <span class="link-name">Acerca de</span>
-        </a>
-        <ul class="sub-menu blank">
-
-          <li><a href="acerca de.html">Acerca de</a></li>
-
-        </ul>
-      </li>
-
-      <li>
-        <div class="profile-details">
-          <div class="profile-content">
-            <img src="./Img/perfil.jpg" alt="profile">
-          </div>
-          <div class="name-job">
-            <div class="profile-name">Prem Shadin</div>
-            <div class="job">Web desginer</div>
-          </div>
-          <i class="ri-logout-box-line"></i>
-        </div>
-      </li>
+      <li><a href="inicio.html"><i class="ri-home-3-fill"></i> <span class="link-name">Inicio</span></a></li>
+      <li><a href="usuarios.html"><i class="ri-id-card-fill"></i> <span class="link-name">Usuarios</span></a></li>
+      <li><a href="categorias.html"><i class="ri-layout-grid-fill"></i> <span class="link-name">Categorías</span></a></li>
+      <li><a href="suministros.html"><i class="ri-parking-box-fill"></i> <span class="link-name">Suministros</span></a></li>
+      <li><a href="inventario.html"><i class="ri-archive-fill"></i> <span class="link-name">Inventario</span></a></li>
+      <li><a href="departamentos.html"><i class="ri-group-line"></i> <span class="link-name">Departamentos</span></a></li>
+      <li><a href="reporte.html"><i class="ri-file-chart-fill"></i> <span class="link-name">Reporte</span></a></li>
+      <li><a href="acerca de.html"><i class="ri-info-i"></i> <span class="link-name">Acerca de</span></a></li>
     </ul>
+</aside>
 
-    </div>
-  </aside>
-
-  <!-- home-bar -->
-
-  <section class="home-section">
+<section class="home-section">
     <div class="home-content">
       <i class="ri-menu-line"></i>
       <span class="text">Departamentos</span>
     </div>
-  </section>
+</section>
 
-  
-  <section class="main-content">
-
-    <!-- header principal -->
+<section class="main-content">
 
     <article class="header-container">
-      <h1>Administrar departamentos</h1>
+      <h1>Administrar Departamentos</h1>
       <ol>
-        <li>
-          <a href="incio.html">
-            <i class="ri-dashboard-3-line"></i>
-            inicio
-          </a>
-        </li>
-        <li>
-          <i class="ri-arrow-right-wide-line"></i>
-         Administrar departamentos
-        </li>
+        <li><a href="inicio.html"><i class="ri-dashboard-3-line"></i> Inicio</a></li>
+        <li><i class="ri-arrow-right-wide-line"></i> Administrar Departamentos</li>
       </ol>
     </article>
 
-    </article>
-  </section>
+    <button class="btn-add">Agregar Departamento</button>
 
-  <!-- footer principal -->
+<!-- Modal -->
+<div class="modal" id="modal-agregar">
+    <div class="modal-content">
+        <h2 id="modal-title">Agregar Departamento</h2>
 
-  <footer class="main-footer">
-    <h3>Copyright &copy; 2025 <a href="#">Gestion de suministros. </a></h3>
+        <label>ID</label>
+        <input id="id-input" type="text" placeholder="ID del departamento">
+
+        <label>Departamento</label>
+        <input id="dep-input" type="text" placeholder="Nombre del departamento">
+
+        <label>Estado de suministros</label>
+        <input id="estado-input" type="text" placeholder="Estado (Ej: Completo, Bajo...)">
+
+        <label>Pedidos realizados</label>
+        <input id="pedidos-input" type="number" placeholder="Número de pedidos">
+
+        <label>Fecha del pedido</label>
+        <input id="fecha-input" type="date">
+
+        <label>Nombre del suministro</label>
+        <input id="suministro-input" type="text" placeholder="Ej: Suministro X">
+
+        <label>Cantidad</label>
+        <input id="cantidad-input" type="number" placeholder="Cantidad">
+
+        <div class="modal-actions">
+            <button class="save-btn">Guardar</button>
+            <button class="close-btn">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- 🔥 AGREGADO SIN CAMBIAR NADA 🔥 -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0 15px 0;">
+    <div>
+        <label>Mostrar 
+            <select id="num-registros" style="padding: 4px 6px; border-radius: 6px;">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select> 
+            registros
+        </label>
+    </div>
+
+    <div>
+        <label><strong>Buscar:</strong>
+            <input type="text" id="buscador" style="padding: 5px; border-radius: 6px;">
+        </label>
+    </div>
+</div>
+<!-- 🔥 FIN DEL AGREGADO 🔥 -->
+
+<!-- Tabla -->
+<div class="table-container">
+    <table class="table-dep">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Departamento</th>
+                <th>Estado de Suministros</th>
+                <th>Pedidos Realizados</th>
+                <th>Fecha del pedido</th>
+                <th>Nombre del suministro</th>
+                <th>Cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td><td>Recursos Humanos</td><td>Completo</td><td>5</td><td>2025-01-01</td><td>Suministro X</td><td>1</td>
+                <td>
+                    <button class="action-btn edit-btn">✏️</button>
+                    <button class="action-btn delete-btn">🗑️</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td><td>Finanzas</td><td>Bajo</td><td>3</td><td>2025-01-01</td><td>Suministro X</td><td>1</td>
+                <td>
+                    <button class="action-btn edit-btn">✏️</button>
+                    <button class="action-btn delete-btn">🗑️</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</section>
+
+<footer class="main-footer">
+    <h3>COPYRIGHT &copy; 2025 <a href="#">Gestión de Suministros</a></h3>
     <span>Todos los derechos reservados.</span>
-  </footer>
+</footer>
 
-  <script src="./JS/app.js"></script>
-   <script src="./JS/aside.js"></script>
+<script src="./JS/app.js"></script>
+<script src="./JS/aside.js"></script>
+
+<script>
+let editandoFila = null;
+
+// ELEMENTOS
+const btnAgregar = document.querySelector('.btn-add');
+const modal = document.getElementById('modal-agregar');
+const closeBtn = document.querySelector('.close-btn');
+const saveBtn = document.querySelector('.save-btn');
+const tablaBody = document.querySelector('.table-dep tbody');
+const modalTitle = document.getElementById("modal-title");
+
+// ABRIR MODAL PARA AGREGAR
+btnAgregar.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalTitle.textContent = "Agregar Departamento";
+    editandoFila = null;
+    document.querySelectorAll(".modal-content input").forEach(i => i.value = "");
+});
+
+// CERRAR MODAL
+closeBtn.addEventListener('click', () => modal.style.display = 'none');
+
+// CLICK FUERA
+window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+});
+
+// GUARDAR / EDITAR
+saveBtn.addEventListener('click', () => {
+
+    const id = document.getElementById("id-input").value;
+    const departamento = document.getElementById("dep-input").value;
+    const estado = document.getElementById("estado-input").value;
+    const pedidos = document.getElementById("pedidos-input").value;
+    const fecha = document.getElementById("fecha-input").value;
+    const suministro = document.getElementById("suministro-input").value;
+    const cantidad = document.getElementById("cantidad-input").value;
+
+    if (!id || !departamento) {
+        alert('Completa al menos el ID y el nombre del departamento');
+        return;
+    }
+
+    if (editandoFila) {
+        editandoFila.children[0].textContent = id;
+        editandoFila.children[1].textContent = departamento;
+        editandoFila.children[2].textContent = estado;
+        editandoFila.children[3].textContent = pedidos;
+        editandoFila.children[4].textContent = fecha;
+        editandoFila.children[5].textContent = suministro;
+        editandoFila.children[6].textContent = cantidad;
+
+    } else {
+        const fila = `
+            <tr>
+                <td>${id}</td>
+                <td>${departamento}</td>
+                <td>${estado}</td>
+                <td>${pedidos}</td>
+                <td>${fecha}</td>
+                <td>${suministro}</td>
+                <td>${cantidad}</td>
+                <td>
+                    <button class="action-btn edit-btn">✏️</button>
+                    <button class="action-btn delete-btn">🗑️</button>
+                </td>
+            </tr>
+        `;
+        tablaBody.innerHTML += fila;
+    }
+
+    modal.style.display = 'none';
+});
+
+// MANEJO DE BOTONES EDITAR / ELIMINAR
+tablaBody.addEventListener("click", (e) => {
+
+    if (e.target.classList.contains("delete-btn")) {
+        e.target.closest("tr").remove();
+    }
+
+    if (e.target.classList.contains("edit-btn")) {
+        editandoFila = e.target.closest("tr");
+
+        document.getElementById("id-input").value = editandoFila.children[0].textContent;
+        document.getElementById("dep-input").value = editandoFila.children[1].textContent;
+        document.getElementById("estado-input").value = editandoFila.children[2].textContent;
+        document.getElementById("pedidos-input").value = editandoFila.children[3].textContent;
+        document.getElementById("fecha-input").value = editandoFila.children[4].textContent;
+        document.getElementById("suministro-input").value = editandoFila.children[5].textContent;
+        document.getElementById("cantidad-input").value = editandoFila.children[6].textContent;
+
+        modalTitle.textContent = "Editar Departamento";
+        modal.style.display = "flex";
+    }
+});
+
+
+// 🔥 BUSCADOR
+document.getElementById("buscador").addEventListener("input", function () {
+    const filtro = this.value.toLowerCase();
+    const filas = tablaBody.querySelectorAll("tr");
+
+    filas.forEach(fila => {
+        const textoFila = fila.textContent.toLowerCase();
+        fila.style.display = textoFila.includes(filtro) ? "" : "none";
+    });
+});
+
+// 🔥 MOSTRAR X REGISTROS
+document.getElementById("num-registros").addEventListener("change", function () {
+    const max = parseInt(this.value);
+    const filas = tablaBody.querySelectorAll("tr");
+
+    filas.forEach((fila, index) => {
+        fila.style.display = index < max ? "" : "none";
+    });
+});
+</script>
 
 </body>
 </html>
