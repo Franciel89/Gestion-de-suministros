@@ -1,0 +1,246 @@
+/* ===============================
+   ESTILO GLOBAL
+================================*/
+body {
+    background-color: #e7eef1;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   HEADER SUPERIOR
+================================*/
+.header-container h1 {
+    background: #21333b;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 28px;
+    border-radius: 5px 5px 0 0;
+}
+
+.header-container ol {
+    background: #21333b;
+    padding: 10px 20px;
+    border-radius: 0 0 5px 5px;
+    color: #fff;
+}
+
+.header-container ol a {
+    color: #c5e8ff;
+    font-weight: bold;
+}
+
+/* ===============================
+   BOTÓN AGREGAR DEPARTAMENTO
+================================*/
+.btn-add {
+    background-color: #2e79b8;
+    border: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #1f5c8b;
+}
+
+/* ===============================
+   BARRA DE BÚSQUEDA Y REGISTROS
+================================*/
+.table-search-bar {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-search-bar label,
+.table-search-bar span,
+.table-search-bar select {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.table-search-bar input {
+    border: 1px solid #9b9b9b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 250px;
+    outline: none;
+}
+
+/* ===============================
+   TABLA
+================================*/
+.table-container {
+    background: #fff;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #c3c3c3;
+    overflow: hidden;
+}
+
+.table-dep {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+/* Encabezado */
+.table-dep thead {
+    background-color: #23343a;
+    color: #fff;
+}
+
+.table-dep thead th {
+    padding: 12px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Filas */
+.table-dep tbody tr {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #ddd;
+    transition: 0.2s ease;
+}
+
+.table-dep tbody tr:hover {
+    background-color: #e8eef3;
+}
+
+.table-dep td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ===============================
+   PAGINACIÓN (ESTILO DATATABLES)
+================================*/
+.dataTables_wrapper .dataTables_info {
+    padding: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding: 10px;
+}
+
+.dataTables_wrapper .paginate_button {
+    background: #23343a !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    padding: 6px 12px !important;
+    margin: 2px !important;
+    transition: 0.3s ease;
+}
+
+.dataTables_wrapper .paginate_button:hover {
+    background: #152227 !important;
+}
+
+.dataTables_wrapper .paginate_button.current {
+    background: #1a2a30 !important;
+    font-weight: bold !important;
+}
+
+/* ===============================
+   MODAL / FORMULARIO
+================================*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+.modal-content {
+    background: #fff;
+    width: 420px;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #23343a;
+    text-align: center;
+}
+
+.modal-content label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-btn {
+    background: #2e79b8;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #1d537a;
+}
+
+.close-btn {
+    background: #b32a2a;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #8d1f1f;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+.table-search-bar,
+.table-search-bar label,
+.table-search-bar span,
+.table-search-bar select {
+    color: #000 !important;
+}
